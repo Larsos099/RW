@@ -14,5 +14,29 @@ namespace lars {
 			CryptoPP::SecByteBlock secBlock(reinterpret_cast<const byte*>(str.data()), str.size());
 			return secBlock;
 		}
+		void collect_files(const fs::path& path, std::vector<fs::path>& file_paths) {
+			try {
+				if (fs::exists(path) && fs::is_directory(path)) {
+					for (const auto& entry : fs::recursive_directory_iterator(path, fs::directory_options::skip_permission_denied)) {
+						if (fs::exists(entry) && fs::is_regular_file(entry)) {
+							file_paths.push_back(entry.path());
+						}
+					}
+				}
+				else {
+					std::cerr << "Path does not exist or is not a directory." << std::endl;
+				}
+			}
+			catch (const std::filesystem::filesystem_error& e) {
+				std::cerr << "Filesystem error: " << e.what() << std::endl;
+			}
+		}
+
+	}
+	namespace aes {
+		void encrypt() {
+			std::cout << "W.I.P function";
+			return;
+		}
 	}
 }
