@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{16461256-EA86-4C7B-ABA1-93E46231EDB1}|RansomNew.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{16461256-EA86-4C7B-ABA1-93E46231EDB1}|RansomNew.vcxproj|D:\\RW\\lars.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{16461256-EA86-4C7B-ABA1-93E46231EDB1}|RansomNew.vcxproj|solutionrelative:lars.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{16461256-EA86-4C7B-ABA1-93E46231EDB1}|RansomNew.vcxproj|D:\\RW\\includes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{16461256-EA86-4C7B-ABA1-93E46231EDB1}|RansomNew.vcxproj|solutionrelative:includes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
@@ -18,11 +22,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "lars.h",
+              "DocumentMoniker": "D:\\RW\\lars.h",
+              "RelativeDocumentMoniker": "lars.h",
+              "ToolTip": "D:\\RW\\lars.h",
+              "RelativeToolTip": "lars.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvw4AAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-07-20T23:01:19.371Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -32,20 +49,20 @@
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "D:\\RW\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAASAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-07-20T22:21:11.484Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "includes.h",
               "DocumentMoniker": "D:\\RW\\includes.h",
               "RelativeDocumentMoniker": "includes.h",
               "ToolTip": "D:\\RW\\includes.h",
               "RelativeToolTip": "includes.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAUAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-07-20T22:22:06.609Z",
               "EditorCaption": ""

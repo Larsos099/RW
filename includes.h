@@ -1,2 +1,12 @@
 #include <SDL2/SDL.h>
 #include <Windows.h>
+#include <CryptoPP/aes.h>
+#include <CryptoPP/modes.h>
+#include <CryptoPP/osrng.h>
+#include <CryptoPP/filters.h>
+#include <CryptoPP/hex.h>
+#include <iostream>
+#include <chrono>
+#include <filesystem>
+#include <fstream>
+#include "lars.h"

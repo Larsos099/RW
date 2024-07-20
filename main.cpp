@@ -1,9 +1,15 @@
-#include <iostream>
-#include "includes.h"  // Make sure the correct header is included
+#include "includes.h" 
 
 int main(int argc, char* argv[]) {
     const int width = 800, height = 600;
-
+    std::string nowUnix = lars::logic::getUnixMS();
+    if (nowUnix.size() < 16) {
+        nowUnix.resize(16, '0');
+    }
+    if (nowUnix.size() > 16) {
+        nowUnix.resize(16);
+    }
+    SecByteBlock key = lars::logic::strToSbb(nowUnix);
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
         std::cout << "SDL_Init Error: " << SDL_GetError() << std::endl;
         return 1;

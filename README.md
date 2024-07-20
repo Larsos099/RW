@@ -1,3 +1,4 @@
+# --ALWAYS BUILD IN RELEASE x86!--
 # Ransomware Collab
 
 ## @Salinity:
@@ -5,4 +6,4 @@
 ## @Quazar9999:
 #### GUI with SDL2
 ## @Larsos099:
-#### Encryption with Crypro++
+#### Encryption with Crypto++
