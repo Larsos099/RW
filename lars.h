@@ -1,3 +1,4 @@
+// Code that only I use and that only I write (lars)
 #pragma once
 #include "includes.h"
 using namespace CryptoPP;
@@ -33,8 +34,12 @@ namespace lars {
 		}
 
 	}
-	namespace aes {
+	namespace aes { // Waiting for socket functionality, so I can send things
 		void encrypt() {
+			std::cout << "W.I.P function";
+			return;
+		}
+		void decrypt() {
 			std::cout << "W.I.P function";
 			return;
 		}
