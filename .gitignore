@@ -4,3 +4,4 @@ RW/**
 *.txt
 .vs/**
 lib/libcrypropp.a
+aminakoyim.vcxproj
