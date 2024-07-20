@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\dalya\\source\\repos\\RW\\",
+  "WorkspaceRootPath": "D:\\RW\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{16461256-EA86-4C7B-ABA1-93E46231EDB1}|RansomNew.vcxproj|C:\\Users\\dalya\\source\\repos\\RW\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{16461256-EA86-4C7B-ABA1-93E46231EDB1}|RansomNew.vcxproj|D:\\RW\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{16461256-EA86-4C7B-ABA1-93E46231EDB1}|RansomNew.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16461256-EA86-4C7B-ABA1-93E46231EDB1}|RansomNew.vcxproj|C:\\Users\\dalya\\source\\repos\\RW\\includes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{16461256-EA86-4C7B-ABA1-93E46231EDB1}|RansomNew.vcxproj|D:\\RW\\includes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{16461256-EA86-4C7B-ABA1-93E46231EDB1}|RansomNew.vcxproj|solutionrelative:includes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -18,40 +18,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\RW\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "D:\\RW\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-07-20T22:21:11.484Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "includes.h",
-              "DocumentMoniker": "C:\\Users\\dalya\\source\\repos\\RW\\includes.h",
+              "DocumentMoniker": "D:\\RW\\includes.h",
               "RelativeDocumentMoniker": "includes.h",
-              "ToolTip": "C:\\Users\\dalya\\source\\repos\\RW\\includes.h",
+              "ToolTip": "D:\\RW\\includes.h",
               "RelativeToolTip": "includes.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAARAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-07-20T22:22:06.609Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\dalya\\source\\repos\\RW\\main.cpp",
-              "RelativeDocumentMoniker": "main.cpp",
-              "ToolTip": "C:\\Users\\dalya\\source\\repos\\RW\\main.cpp",
-              "RelativeToolTip": "main.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-07-20T22:21:11.484Z",
               "EditorCaption": ""
             }
           ]
