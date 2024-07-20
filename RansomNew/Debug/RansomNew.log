@@ -1,5 +1,0 @@
-﻿  main.cpp
-cryptlib.lib(allocate.obj) : error LNK2038: Konflikt ermittelt für "RuntimeLibrary": Der Wert "MT_StaticRelease" stimmt nicht mit dem Wert "MTd_StaticDebug" in main.obj überein.
-cryptlib.lib(pch.obj) : error LNK2038: Konflikt ermittelt für "RuntimeLibrary": Der Wert "MT_StaticRelease" stimmt nicht mit dem Wert "MTd_StaticDebug" in main.obj überein.
-LINK : warning LNK4098: Standardbibliothek "LIBCMT" steht in Konflikt mit anderen Bibliotheken; /NODEFAULTLIB:Bibliothek verwenden.
-D:\RW\Debug\RansomNew.exe : fatal error LNK1319: 2 Konflikte ermittelt
