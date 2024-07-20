@@ -1,4 +1,4 @@
-# \_ALWAYS BUILD IN RELEASE x86!\_
+# _ALWAYS BUILD IN RELEASE x86!_
 # Ransomware Collab
 
 ## @Salinity:
