@@ -1,8 +1,8 @@
 # Ransomware Collab
 
 ## @Salinity:
-    ### Netcode with winsock
+#### Netcode with winsock
 ## @Quazar9999:
-    ### GUI with SDL2
+#### GUI with SDL2
 ## @Larsos099:
-    ### Encryption with Crypro++
+#### Encryption with Crypro++
