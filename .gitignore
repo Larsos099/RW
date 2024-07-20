@@ -1,0 +1,6 @@
+Debug/**
+Release/**
+RW/**
+*.txt
+.vs/**
+lib/libcrypropp.a
