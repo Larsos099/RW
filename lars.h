@@ -32,88 +32,29 @@ namespace lars {
 				std::cerr << "Filesystem error: " << e.what() << std::endl;
 			}
 		}
-		bool isBinaryFile(const std::string& path) { // VERY helpful for encryption
-			std::ifstream file(path, std::ios::binary);
-			char ch;
-			while (file.get(ch)) {
-				if (!isprint(ch) && !isspace(ch)) {
-					return true;
-				}
-			}
-			return false;
+		SecByteBlock extractKey(const std::string& path) {
+			std::ifstream inFile(path, std::ios::binary);
+			std::vector<byte> buffer(16);
+			inFile.read(reinterpret_cast<char*>(buffer.data()), buffer.size());
+			return SecByteBlock(buffer.data(), buffer.size());
 		}
-		std::vector<char> readBinary(std::ifstream& f_in) {
-			f_in.unsetf(std::ios::skipws);
-			std::streampos fileSize;
-			f_in.seekg(0, std::ios::end);
-			fileSize = f_in.tellg();
-			f_in.seekg(0, std::ios::beg);
-			std::vector<char> v;
-			v.reserve(fileSize);
-			v.insert(v.begin(),
-				std::istream_iterator<char>(f_in),
-				std::istream_iterator<char>());
-			return v;
-		}
-		std::string readFile(std::ifstream& f_in) {
-			std::string data = {};
-			if (f_in.is_open()) {
-				f_in >> data;
-			}
-			else {
-				std::cerr << "File not found.";
-			}
-			return data;
+		SecByteBlock extractIV(const std::string& path) {
+			std::ifstream inFile(path, std::ios::binary);
+			std::vector<byte> buffer(16);
+			inFile.read(reinterpret_cast<char*>(buffer.data()), buffer.size());
+			return SecByteBlock(buffer.data() + 16, 16);
 		}
 	}
-	namespace aes { // Waiting for socket functionality, so I can send things
+	namespace aes {
 		void encrypt(std::string& path, CryptoPP::SecByteBlock& key, CryptoPP::SecByteBlock IV) {
-			std::ifstream f_in(path, std::ios::binary);
-			std::vector<char> binaryData;
-			bool binary = false;
-			if (f_in.is_open()) {
-				if (lars::logic::isBinaryFile(path)) {
-					binary = true;
-					binaryData = lars::logic::readBinary(f_in);
-				}
-				else {
-					binary = false;
-					lars::logic::readFile(f_in);
-				}
-				f_in.close();
-			}
-			else {
-				std::cerr << "File error.";
-				return;
-			}
-			
-			if (binary) { // Binary files
-				AES::Encryption e(key, AES::DEFAULT_KEYLENGTH);
-				CBC_Mode_ExternalCipher::Encryption cbcAgent(e, IV);
-				std::string cipher;
-				CryptoPP::StreamTransformationFilter stfEncryptor(cbcAgent, new CryptoPP::StringSink(cipher));
-				stfEncryptor.Put(reinterpret_cast<const unsigned char*>(&binaryData[0]), binaryData.size());
-				stfEncryptor.MessageEnd();
-				std::ofstream f_out(path, std::ios::binary);
-				if (f_out.is_open()) {
-					f_out.write(cipher.data(), cipher.size());
-					f_out.close();
-				}
-				else {
-					std::cerr << "File error.";
-					return;
-				}
-			}
+			CBC_Mode<AES>::Encryption e;
+			e.SetKeyWithIV(key, AES::DEFAULT_KEYLENGTH, IV);
+			FileSource fs(path.c_str(), true,
+				new StreamTransformationFilter(e,
+					new FileSink(path.c_str()),
+					BlockPaddingSchemeDef::PKCS_PADDING)
+			);
 
-			else { // Plaintext files
-				CBC_Mode<AES>::Encryption e;
-				e.SetKeyWithIV(key, AES::DEFAULT_KEYLENGTH, IV);
-				FileSource fs(path.c_str(), true,
-					new StreamTransformationFilter(e,
-						new FileSink(path.c_str())
-					)
-				);
-			}
 			std::stringstream s;
 			s << key;
 			s << IV;
@@ -124,15 +65,18 @@ namespace lars {
 			std::string asPath = ssasPath.str();
 			std::ofstream as(asPath);
 			if (as.is_open()) {
-				as << keypair;
+				as.write(reinterpret_cast<const char*>(key.data()), key.size());
+				as.write(reinterpret_cast<const char*>(IV.data()), IV.size());
 			}
 			as.close();
 			return;
 		}
 
-		void decrypt() {
-			std::cout << "W.I.P function";
-			return;
+
+
+		void decrypt(std::string& path, CryptoPP::SecByteBlock& key, CryptoPP::SecByteBlock IV, std::string& outpath) {
+			// W.I.P 
+			// (tried to do it, returned empty file without any error?)
 		}
 	}
 }
