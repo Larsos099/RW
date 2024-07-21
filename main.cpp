@@ -18,8 +18,8 @@ int main(int argc, char* argv[]) {
         std::cout << "SDL_Init Error: " << SDL_GetError() << std::endl;
         return 1;
     }
-    /*std::cout << nowUnix;
-    fs::path path = usrHome.c_str();
+    std::cout << nowUnix;
+    /*fs::path path = usrHome.c_str();
     std::vector<fs::path> file_paths;
     std::ofstream f("bederaldinnasif.txt");
     lars::logic::collect_files(path, file_paths);
