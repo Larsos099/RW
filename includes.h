@@ -8,5 +8,9 @@
 #include <iostream>
 #include <chrono>
 #include <filesystem>
+#include <cctype>
+#include <vector>
+#include <CryptoPP/default.h>
+#include <CryptoPP/files.h>
 #include <fstream>
 #include "lars.h"
